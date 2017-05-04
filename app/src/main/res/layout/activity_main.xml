@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="org.androidtown.myapplication.MainActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="98dp"
+        android:layout_height="91dp"
+        app:srcCompat="@drawable/엘사"
+  />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="294dp"
+        android:layout_height="41dp"
+        android:text="RECOMMEND EAT GO"
+        android:textSize="27dp"
+        android:textColor="#FF33B5E5"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginBottom="15dp" />
+
+    <View
+        android:layout_height="11dp"
+        android:background="#FF33B5E5"
+        android:layout_width="273dp"
+        android:id="@+id/view"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/imageView"
+  />
+
+    <Button
+        android:id="@+id/ladder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:drawableTop="@drawable/사다리"
+        android:text="RANDOM MODE"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:drawableTop="@drawable/선택모드"
+        android:text="SELECTION MODE"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/ladder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+    <Button
+        android:id="@+id/dutch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:drawableTop="@drawable/더치페이"
+        android:text="DUTCH PAY"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
