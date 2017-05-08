@@ -1,4 +1,4 @@
-package org.androidtown.reeatgo;
+package org.androidtown.termproject;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package org.androidtown.reeatgo;
+package org.androidtown.termproject;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.androidtown.reeatgo", appContext.getPackageName());
+        assertEquals("org.androidtown.termproject", appContext.getPackageName());
     }
 }

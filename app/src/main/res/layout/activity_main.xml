@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="org.androidtown.myapplication.MainActivity">
+    tools:context="org.androidtown.termproject.MainActivity">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="98dp"
         android:layout_height="91dp"
-        app:srcCompat="@drawable/엘사"
-  />
+        app:srcCompat="@drawable/elsa"
+        />
     <TextView
         android:id="@+id/textView"
         android:layout_width="294dp"
@@ -32,14 +32,14 @@
         android:id="@+id/view"
         android:layout_alignBottom="@+id/textView"
         android:layout_toRightOf="@+id/imageView"
-  />
+        />
 
     <Button
         android:id="@+id/ladder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:drawableTop="@drawable/사다리"
+        android:drawableTop="@drawable/ladder"
         android:text="RANDOM MODE"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:drawableTop="@drawable/선택모드"
+        android:drawableTop="@drawable/select"
         android:text="SELECTION MODE"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:drawableTop="@drawable/더치페이"
+        android:drawableTop="@drawable/dutchpay"
         android:text="DUTCH PAY"
         android:textStyle="bold"
         android:textSize="20dp"

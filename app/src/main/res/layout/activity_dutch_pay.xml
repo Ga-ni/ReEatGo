@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="org.androidtown.termproject.DutchPay">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#FF33B5E5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="DUTCH PAY"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:text=" 총액:"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toLeftOf="@+id/editText"
+        android:layout_toStartOf="@+id/editText"
+        android:layout_marginBottom="11dp"
+        />
+
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:id="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/cash" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cash"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/cash"
+        android:layout_toStartOf="@+id/cash" />
+
+    <TextView
+        android:id="@+id/person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text=" 인원:"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_marginBottom="11dp"
+        />
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:id="@+id/editText2"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignTop="@+id/person" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/person"
+        android:layout_below="@+id/imageView2"
+        android:layout_toLeftOf="@+id/person"
+        android:layout_toStartOf="@+id/person" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="x 0"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/button"
+        android:layout_alignRight="@+id/person"
+        android:layout_alignEnd="@+id/person" />
+    <TextView
+        android:id="@+id/oneMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="0000원"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_alignLeft="@+id/twoMoney"
+        android:layout_alignStart="@+id/twoMoney" />
+    <TextView
+    android:id="@+id/two"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:text="x 0"
+    android:textSize="30dp"
+        android:textColor="#000000"
+    android:textStyle="bold"
+
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/imageView12"
+        android:layout_alignLeft="@+id/one"
+        android:layout_alignStart="@+id/one" />
+    <TextView
+        android:id="@+id/twoMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="0000원"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+
+        android:layout_alignBottom="@+id/imageView6"
+        android:layout_alignLeft="@+id/threeMoney"
+        android:layout_alignStart="@+id/threeMoney" />
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="x 0"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/imageView13"
+        android:layout_alignLeft="@+id/two"
+        android:layout_alignStart="@+id/two" />
+    <TextView
+        android:id="@+id/threeMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="0000원"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_toRightOf="@+id/imageView7"
+        android:layout_toEndOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/arrow"
+        android:layout_alignBottom="@+id/one"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_alignTop="@+id/two"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/three"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_alignStart="@+id/imageView6"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/girl"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/boy"
+        android:layout_below="@+id/imageView12"
+        android:layout_alignLeft="@+id/imageView12"
+        android:layout_alignStart="@+id/imageView12"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/woman"
+        android:layout_below="@+id/imageView13"
+        android:layout_alignLeft="@+id/imageView13"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_marginTop="17dp" />
+
+</RelativeLayout>
