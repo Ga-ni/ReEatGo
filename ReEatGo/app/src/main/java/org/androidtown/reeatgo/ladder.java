@@ -285,7 +285,7 @@ public class ladder extends AppCompatActivity {
 //            Image.bringToFront();
             aniSet.addAnimation(tAnim.get(i));
             aniSet.setFillAfter(true);
-
+//아아아.... 왜.... 이미지가 안보이냐구~!~!
             Image.bringToFront();
         }
         Image.startAnimation(aniSet);
