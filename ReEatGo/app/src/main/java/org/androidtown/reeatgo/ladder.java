@@ -15,12 +15,15 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
+import java.util.ArrayList;
 import java.util.Random;
 import static java.lang.Math.abs;
 
 public class ladder extends AppCompatActivity {
     float sadariarr[][] = new float[4][8];
     Random randomS= new Random();
+    ArrayList<TranslateAnimation> tAnim = new ArrayList<TranslateAnimation>();
 
     MyView mv;
     FrameLayout sadariContainer;
@@ -152,7 +155,7 @@ public class ladder extends AppCompatActivity {
 
         //가로이동 + 세로이동 loop
         int count=0;
-        while(count<8){
+        while(count<10){
             Log.d("tag","while룹 안");
             //가로로 이동하기
             if(xIdx==1){
@@ -262,6 +265,40 @@ public class ladder extends AppCompatActivity {
         }//while loop
 
 
+        //int end=tAnim.size();
+        //Log.d("tag","tAnim.size()"+end);
+        //int k=0;
+
+
+        TranslateAnimation temp;
+//        temp=tAnim.get(0);
+//        temp.setDuration(500);
+//        temp.setFillAfter(true);
+//        Image.startAnimation(temp);
+//        Image.bringToFront();
+        AnimationSet aniSet=new AnimationSet(true);
+        for(int i=0;i<tAnim.size();i++){
+//            temp=tAnim.get(i);
+//            temp.setDuration(500);
+//            temp.setFillAfter(true);
+//            Image.startAnimation(temp);
+//            Image.bringToFront();
+            aniSet.addAnimation(tAnim.get(i));
+            aniSet.setFillAfter(true);
+
+            Image.bringToFront();
+        }
+        Image.startAnimation(aniSet);
+
+//        while(k<7){
+//            temp=tAnim.get(end);
+//            temp.setFillAfter(true);
+//            Image.startAnimation(temp);
+//            Image.bringToFront();
+//            end--;
+//            k++;
+//        }
+
 
 
         for(int i=0;i<4;i++){
@@ -274,13 +311,21 @@ public class ladder extends AppCompatActivity {
         }
 
     }
+
+
+
     public void makeAnimation(float fX,float tX, float fY, float tY) {
         Log.d("tag","makeAnimation:"+fX+", "+tX+", "+fY+", "+tY);
-        TranslateAnimation ani=new TranslateAnimation(fX,tX,fY,tY);
-        ani.setDuration(500);
-        ani.setFillAfter(true);
-        Image.startAnimation(ani);
-        Image.bringToFront();
+        //TranslateAnimation ani=new TranslateAnimation(fX,tX,fY,tY);
+        //ani.setDuration(500);
+        //ani.setFillAfter(true);
+        //Image.startAnimation(ani);
+       // Image.bringToFront();
+
+        tAnim.add(new TranslateAnimation(fX,tX,fY,tY));
+
+
+
 //        ani.setAnimationListener(new Animation.AnimationListener() {
 //            @Override
 //            public void onAnimationStart(Animation animation) {
