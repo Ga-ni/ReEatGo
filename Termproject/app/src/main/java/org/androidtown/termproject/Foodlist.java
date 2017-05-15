@@ -6,18 +6,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class foodlist extends AppCompatActivity {
+public class Foodlist extends AppCompatActivity {
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.foodlist); //인플레이터
+        setContentView(R.layout.activity_foodlist); //인플레이터
         final TextView foodlist = (TextView) findViewById(R.id.textView3);
         final Button exit = (Button) findViewById(R.id.button2);
-       intent = getIntent();//부모 인텐트 객체
+        intent = getIntent();//부모 인텐트 객체
         if(intent!=null)
         {
-            String outFoodlist = intent.getStringExtra("foodlist"); //username이 변수인 인텐트 데이터 가져오기
+            String outFoodlist = intent.getStringExtra("foodlist");
 
             foodlist.setText(outFoodlist); //TextView 메시지 설정하기
 

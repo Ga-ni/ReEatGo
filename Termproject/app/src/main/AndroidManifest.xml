@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".DutchPay" />
         <activity android:name=".Ladder" />
-        <activity android:name=".Selection"></activity>
+        <activity android:name=".Selection" />
+        <activity android:name=".Foodlist"></activity>
     </application>
 
 </manifest>

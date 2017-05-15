@@ -67,31 +67,34 @@ public class MainActivity extends Activity {
             Bundle bundle = data.getExtras();
             int group_id = bundle.getInt("group_id");
             queryData(group_id);
+            goFood(foodlist);
+
         }
 
+    }
+    public void goFood(String food)
+    {
+        intent = new Intent (getApplicationContext(), Foodlist.class);
+        intent.putExtra("foodlist",food);
+        startActivity(intent);
     }
     private void createDatabase(){
         String name = "ex1.db";
-        database = openOrCreateDatabase(name, MODE_WORLD_WRITEABLE, null); //DB가 존재하면 오픈. 존재하지않은면 생성
+        database = openOrCreateDatabase(name,MODE_PRIVATE, null); //DB가 존재하면 오픈. 존재하지않은면 생성
     }
 
     //테이블 생성
-    /*private void createTable() {
-
+    private void createTable() {
         String sql = "create table " + tableName + "(per_id integer, group_id integer, fName text, price integer, rName text, address text, number text, etc text)";
-
         try {
             database.execSQL(sql);//slq문 실행
-            textView2.setText("테이블 생성"+"\n");
         } catch (Exception e) {
-            textView2.setText(e.getMessage()+"\n");
             e.printStackTrace();
         }
-
-    }*/
+    }
 
     //데이터넣기
-    /*private void insertData(){
+    private void insertData(){
         database.beginTransaction(); //sql문을 실행하는 일정구간을 트랜잭션으로 묶어주겠다라는 의미
         //트랜잭션 시작을 나타내는 메소드
         try{
@@ -102,9 +105,7 @@ public class MainActivity extends Activity {
             database.execSQL(sql);
             sql = "insert into "+ tableName + "(per_id, group_id, fName, price, rName, address, number, etc) values(2,303,'ㄷㅏ예',5000,'다예씌','다예자취방','010-6276-0432','꿀꿀')";
             database.execSQL(sql);
-
             database.setTransactionSuccessful(); //트랜잭션으로 묶어준 일정영역의 SQL문들이 모두 성공적으로 끝났을 지정
-
         }catch(Exception e){
             //SQL문 실행중 오류가 발생하면 예외처리가 되고..
             //트랜잭션에 정의된 SQL쿼리가 성공되지 않았기때문에 finally블록에서
@@ -113,8 +114,7 @@ public class MainActivity extends Activity {
         }finally{
             database.endTransaction(); //트랜잭션을 끝내는 메소드.
         }
-
-    }*/
+    }
     private void queryData(int group_id){
         String sql = "select per_id, group_id, fName, price, rName, address, number, etc from "+ tableName + " where group_id = " + group_id;
         Cursor cursor = database.rawQuery(sql, null);
@@ -124,7 +124,7 @@ public class MainActivity extends Activity {
             int count = cursor.getCount(); //조회된 개수얻기
             for(int i = 0; i< count ; i++){
                 cursor.moveToNext();
-                foodlist=cursor.getString(0) + "\n" +cursor.getString(1) +"\n"+ cursor.getString(2)+"\n"+ cursor.getString(3)+"\n"+ cursor.getString(4)+"\n"+ cursor.getString(5)+"\n"+ cursor.getString(6)+"\n"+ cursor.getString(7);
+                foodlist+=cursor.getString(0) + "\n" +cursor.getString(1) +"\n"+ cursor.getString(2)+"\n"+ cursor.getString(3)+"\n"+ cursor.getString(4)+"\n"+ cursor.getString(5)+"\n"+ cursor.getString(6)+"\n"+ cursor.getString(7)+"\n\n\n\n";
                 textView1.append("#"+i+1+":"+foodlist+"\n\n\n\n");
 
             }
