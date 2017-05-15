@@ -19,7 +19,7 @@ public class Selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
-        S1_0 = (s1) getSupportFragmentManager().findFragmentById(R.id.s1_0);
+        S1_0 = new s1();//(s1) getSupportFragmentManager().findFragmentById(R.id.s1_0);
         s2_0 = new S2_0();
         s2_1 = new S2_1();
         s3_0 = new S3_0();
