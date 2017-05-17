@@ -28,8 +28,8 @@ public class MainActivity extends Activity {
         Button button1 = (Button) findViewById(R.id.selection);
         Button button2 = (Button) findViewById(R.id.ladder);
         createDatabase();
-        createTable();
-        insertData();
+        //createTable();
+        //insertData();
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +165,7 @@ public class MainActivity extends Activity {
             for(int i = 0; i< count ; i++){
                 cursor.moveToNext();
                 foodlist+=cursor.getString(2) +" ";
-                info += cursor.getString(3)+"\n"+ cursor.getString(4)+"\n"+ cursor.getString(5)+"\n"+ cursor.getString(6)+"\n"+ cursor.getString(7)+"\n\n\n\n";
+                info += cursor.getString(3)+"\n"+ cursor.getString(4)+"\n"+ cursor.getString(5)+"\n"+ cursor.getString(6)+"\n"+ cursor.getString(7)+".";
 
             }
         }

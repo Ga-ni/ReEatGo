@@ -19,7 +19,8 @@
         <activity android:name=".DutchPay" />
         <activity android:name=".Ladder" />
         <activity android:name=".Selection" />
-        <activity android:name=".Foodlist"></activity>
+        <activity android:name=".Foodlist" />
+        <activity android:name=".FoodInfo"></activity>
     </application>
 
 </manifest>

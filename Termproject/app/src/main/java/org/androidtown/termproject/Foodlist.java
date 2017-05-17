@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -23,7 +24,7 @@ public class Foodlist extends AppCompatActivity {
     Intent intent;
     String outFoodlist;
     String outInfo;
-    public String[] foodName = new String[50];
+    public String[] foodInfo = new String[50];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +41,8 @@ public class Foodlist extends AppCompatActivity {
             outFoodlist = intent.getStringExtra("foodlist");
             outInfo = intent.getStringExtra("info");
             int len = outFoodlist.length();
-            int j=0;
-            int k=0;
+            int len1 = outInfo.length();
+            int j=0, k=0, m=0,n=0;
             for(int i =0; i<len; i++)
             {
                 if(outFoodlist.charAt(i) == ' ')
@@ -53,13 +54,30 @@ public class Foodlist extends AppCompatActivity {
 
                 }
             }
+            for(int l=0; l<len1; l++)
+            {
+                if(outInfo.charAt(l)=='.')
+                {
+                    foodInfo[m]=outInfo.substring(n,l);
+                    n = l+1;
+                    m++;
+
+                }
+            }
 
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>( this, android.R.layout.simple_spinner_item, arrayList);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView adapterView, View view, int position, long id){
+               //음식정보 액티비티 인텐트로 실행 & 정보넘겨주기
+                intent = new Intent (getApplicationContext(), FoodInfo.class);
+                intent.putExtra("info",foodInfo[position]);
+                startActivity(intent);
+            }
 
-
-
+        });
 
         exit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
