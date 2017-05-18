@@ -58,7 +58,7 @@ public class Foodlist extends AppCompatActivity {
             {
                 if(outInfo.charAt(l)=='.')
                 {
-                    foodInfo[m]=outInfo.substring(n,l);
+                    foodInfo[m]="\n\n\n"+outInfo.substring(n,l);
                     n = l+1;
                     m++;
 
@@ -66,7 +66,7 @@ public class Foodlist extends AppCompatActivity {
             }
 
         }
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>( this, android.R.layout.simple_spinner_item, arrayList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>( this, R.layout.simpleitem, arrayList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override

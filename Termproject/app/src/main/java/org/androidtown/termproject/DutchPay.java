@@ -34,8 +34,9 @@ public class DutchPay extends AppCompatActivity {
                 int total = Integer.parseInt(cash.getText().toString());
                 int persons = Integer.parseInt(person.getText().toString());
                 int sum = total/persons;
-                int change;
                 sum = (sum/1000)*1000;
+                //총 내야하는 돈을 인원수로 나누었을 때 값//나눈 돈을 1000원 단위로 내림을 함
+                int change;
 
                 if(sum*persons == total)
                 {
@@ -47,7 +48,7 @@ public class DutchPay extends AppCompatActivity {
                 {
 
                     int flag =1;
-                    change = total - (sum*persons);
+                    change = total - (sum*persons);//나머지 돈은 총 내야할 돈에서 천원단위로 내야할 돈과 인원수의 곱을 뺍니다.
 
                     if(change>=1000)//나누어 떨어지지 않을 때
                     {

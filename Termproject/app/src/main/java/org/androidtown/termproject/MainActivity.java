@@ -12,12 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends Activity {
     SQLiteDatabase database;
+    String randFood = "";
     String tableName = "FOOD";
     Intent intent;
     String foodlist ="";
     String info="";
+    int randNum=0;
 
 
     @Override
@@ -49,6 +53,20 @@ public class MainActivity extends Activity {
         button2.setOnClickListener(new View.OnClickListener(){
             @Override public void onClick(View view) {
                 intent = new Intent(getApplicationContext(), Ladder.class);
+                Random random = new Random();
+                int [] ran = {-1,-1,-1,-1,-1};
+                int temp;
+                for(int i=0; i<5 ; i++) {
+                    temp=random.nextInt(47);
+
+                    while(temp==ran[0]&&temp==ran[1]&&temp==ran[2]&&temp==ran[3]&&temp==ran[4]){
+                         temp=random.nextInt(47);
+                     }
+                 ran[i]=temp;
+                 queryData2(ran[i]);
+                }
+
+                intent.putExtra("randFood",randFood);
                 startActivity(intent);
 
             }
@@ -156,7 +174,7 @@ public class MainActivity extends Activity {
         }
     }
     private void queryData(int group_id){
-        String sql = "select per_id, group_id, fName, price, rName, address, number, etc from "+ tableName + " where group_id = " + group_id;
+        String sql = "select per_id, group_id, fName, price, rName, address, number, etc from "+ tableName + " where group_id = " + group_id+" order by price";
         Cursor cursor = database.rawQuery(sql, null);
 
 
@@ -165,12 +183,28 @@ public class MainActivity extends Activity {
             for(int i = 0; i< count ; i++){
                 cursor.moveToNext();
                 foodlist+=cursor.getString(2) +" ";
-                info += cursor.getString(3)+"\n"+ cursor.getString(4)+"\n"+ cursor.getString(5)+"\n"+ cursor.getString(6)+"\n"+ cursor.getString(7)+".";
+                info += "가격: "+cursor.getString(3)+"원\n음식점 이름: "+ cursor.getString(4)+"\n주소: "+ cursor.getString(5)+"\n전화번호: "+ cursor.getString(6)+"\n참고사항: "+ cursor.getString(7)+".";
 
             }
         }
 
     }
+    private void queryData2(int per_id){
+        String sql = "select per_id, group_id, fName, price, rName, address, number, etc from "+ tableName + " where per_id = " + per_id;
+        Cursor cursor = database.rawQuery(sql, null);
+
+
+        if(cursor != null){
+            int count = cursor.getCount(); //조회된 개수얻기
+            //for(int i = 0; i< count ; i++){
+                cursor.moveToNext();
+                randFood+=cursor.getString(2) +" ";
+
+            //}
+        }
+
+    }
+
 
 
 }
