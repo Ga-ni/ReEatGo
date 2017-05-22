@@ -56,6 +56,7 @@ public class Ladder extends AppCompatActivity {
         Intent intent;
         intent = getIntent();
         outFoodlist = intent.getStringExtra("randFood");
+        Log.d("tag",""+outFoodlist);
         int j=0,i=-1;
         while(j<5){
             i++;
@@ -96,7 +97,7 @@ public class Ladder extends AppCompatActivity {
 
             float baseX= getRootView().getWidth()/10;//this
             float startY = getRootView().getBaseline()+16;//15.0
-            float finishY = sadariContainer.getBottom()-355;//875.0
+            float finishY = sadariContainer.getBottom();//875.0 //sadariContainer.getBottom()-355;
             int i=0,j=0;
             //세로로 라인 5개를 그린다.
             canvas.drawLine(baseX, startY, baseX, finishY, pnt);
