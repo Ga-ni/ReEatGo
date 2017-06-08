@@ -67,6 +67,7 @@ public class Ladder extends AppCompatActivity {
         //mainActivity로부터 받은 intent에서 string(음식 5개)을 받아서 어레이에 하나씩 넣는다.
         Intent intent;
         intent = getIntent();
+<<<<<<< HEAD
         getFoodName = intent.getStringExtra("randFood");
         getFoodInfo = intent.getStringExtra("randInfo");
         getrestAddress=intent.getStringExtra("randAddress");
@@ -74,6 +75,10 @@ public class Ladder extends AppCompatActivity {
         Log.d("Ladder","레더\ngetfoodName: "+getFoodName+"\ngetFoodInfo: "+getFoodInfo+"\ngetrestAdd: "+getrestAddress+"\nrestName: "+food);
 
         Log.d("Ladder","어레이확인!!\nfoodName");
+=======
+        outFoodlist = intent.getStringExtra("randFood");
+        Log.d("tag",""+outFoodlist);
+>>>>>>> origin/master
         int j=0,i=-1;
         while(j<5){
             i++;
@@ -145,9 +150,15 @@ public class Ladder extends AppCompatActivity {
             pnt.setStrokeWidth(20);
             pnt.setStrokeCap(Paint.Cap.ROUND);
 
+<<<<<<< HEAD
             float baseX= sadariContainer.getWidth()/10;//this    /w:768,h:600(sadariContainer)
             float startY = sadariContainer.getBaseline();//15.0//+16이었음
             float finishY = startY+sadariContainer.getHeight()-20;//875.0 //sadariContainer.getBottom()-355;
+=======
+            float baseX= getRootView().getWidth()/10;//this
+            float startY = getRootView().getBaseline()+16;//15.0
+            float finishY = sadariContainer.getBottom();//875.0 //sadariContainer.getBottom()-355;
+>>>>>>> origin/master
             int i=0,j=0;
             //세로로 라인 5개를 그린다.
             canvas.drawLine(baseX, startY, baseX, finishY, pnt);
