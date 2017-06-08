@@ -1,33 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/select1"
+    tools:context="org.androidtown.termproject.MainActivity">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:orientation="horizontal" android:layout_width="match_parent"
-
-    android:layout_height="match_parent">
-
-
-
-    <Button
-
-        android:layout_width="wrap_content"
-
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
 
-        android:text="고기 X"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        >
 
-        android:id="@+id/s1_0"/>
+        <ImageButton
+            android:id="@+id/s1_0"
+            android:layout_width="wrap_content"
+            android:layout_height="295dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/gogi2" />
 
-    <Button
+        <ImageButton
+            android:id="@+id/s1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="295dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/gogi1" />
 
-        android:layout_width="wrap_content"
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
 
-        android:layout_height="wrap_content"
-
-        android:text="고기 0"
-
-        android:id="@+id/s1_1"/>
-
-
-
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="53dp"
+            android:layout_height="73dp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/back2" />
+    </LinearLayout>
 </LinearLayout>

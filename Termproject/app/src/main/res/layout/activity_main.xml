@@ -1,77 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:background="@drawable/menu"
     tools:context="org.androidtown.termproject.MainActivity">
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="98dp"
-        android:layout_height="91dp"
-        app:srcCompat="@drawable/elsa"
-        />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="294dp"
-        android:layout_height="41dp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_marginBottom="15dp"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView"
-        android:text="RECOMMEND EAT GO"
-        android:textColor="#FF33B5E5"
-        android:textSize="27dp"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_height="11dp"
-        android:background="#FF33B5E5"
-        android:layout_width="273dp"
-        android:id="@+id/view"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_toRightOf="@+id/imageView"
-        />
-
-    <Button
-        android:id="@+id/ladder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:drawableTop="@drawable/ladder"
-        android:text="RANDOM MODE"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
-    <Button
-        android:id="@+id/selection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:drawableTop="@drawable/select"
-        android:text="SELECTION MODE"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_below="@+id/ladder"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp" />
-
-    <Button
-        android:id="@+id/dutch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:drawableTop="@drawable/dutchpay"
-        android:text="DUTCH PAY"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_below="@+id/selection"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="2.63"
+   >
+  </LinearLayout>
 
 
-</RelativeLayout>
+
+ <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="2"
+     android:gravity="center_horizontal"
+   >
+  <ImageButton
+      android:id="@+id/random"
+      android:layout_width="wrap_content"
+      android:layout_height="90dp"
+      android:adjustViewBounds="true"
+      android:background="@android:color/transparent"
+      android:scaleType="fitStart"
+      android:src="@drawable/randommode"
+      />
+  </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="0dp"
+     android:layout_weight="2"
+     android:gravity="center_horizontal">
+  <ImageButton
+      android:id="@+id/select"
+      android:layout_width="wrap_content"
+      android:layout_height="90dp"
+      android:layout_gravity="center_horizontal"
+      android:adjustViewBounds="true"
+      android:background="@android:color/transparent"
+      android:scaleType="fitStart"
+      android:src="@drawable/selection"
+      />
+
+ </LinearLayout>
+
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="0dp"
+     android:layout_weight="2"
+     android:gravity="center_horizontal">
+
+  <ImageButton
+      android:id="@+id/dutch"
+      android:layout_width="wrap_content"
+      android:layout_height="90dp"
+      android:layout_gravity="center_horizontal"
+      android:adjustViewBounds="true"
+      android:background="@android:color/transparent"
+      android:scaleType="fitStart"
+      android:src="@drawable/dutchpaymode"
+      />
+ </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="0dp"
+     android:layout_weight="0.5">
+ </LinearLayout>
+</LinearLayout>
+
+
+

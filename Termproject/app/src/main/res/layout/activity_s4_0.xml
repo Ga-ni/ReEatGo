@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/select1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+        <ImageButton
+            android:id="@+id/s3_00"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kor"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginRight="5dp"
+            />
+        <ImageButton
+            android:id="@+id/s3_01"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chi"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+        <ImageButton
+            android:id="@+id/s3_02"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ja"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginRight="5dp"
+            />
+        <ImageButton
+            android:id="@+id/s3_03"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ame"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+        <ImageButton
+            android:id="@+id/s3_04"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ramen"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginRight="5dp"
+            />
+        <ImageButton
+            android:id="@+id/s3_05"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ham"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="53dp"
+            android:layout_height="73dp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/back2" />
+    </LinearLayout>
+</LinearLayout>
+
+
+

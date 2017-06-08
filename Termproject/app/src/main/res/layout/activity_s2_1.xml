@@ -1,51 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/select1"
+    tools:context="org.androidtown.termproject.MainActivity">
 
-    android:layout_width="match_parent"
-
-    android:layout_height="match_parent"
-
-    tools:context="org.androidtown.termproject.S2_0">
-
-
-
-    <Button
-
-        android:layout_width="wrap_content"
-
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
 
-        android:text="해산물"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.24"
+        android:orientation="horizontal"
+        >
 
-        android:id="@+id/s2_10"/>
+        <ImageButton
+            android:id="@+id/s2_10"
+            android:layout_width="wrap_content"
+            android:layout_height="295dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/seafood" />
 
-    <Button
+        <ImageButton
+            android:id="@+id/s2_11"
+            android:layout_width="wrap_content"
+            android:layout_height="295dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/meat" />
 
-        android:layout_width="wrap_content"
+    </LinearLayout>
 
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
 
-        android:text="육류"
-
-        android:id="@+id/s2_11"/>
-
-    <Button
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:text="뒤로가기"
-
-        android:id="@+id/back1"/>
-
-
-
-
-
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="53dp"
+            android:layout_height="73dp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/back2" />
+    </LinearLayout>
 
 
 </LinearLayout>

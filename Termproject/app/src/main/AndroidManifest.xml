@@ -2,25 +2,54 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.androidtown.termproject">
 
+    <permission
+        android:name="org.androidtown.termproject.permission.MAPS_REVEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.pemission.READ_GSERVICES" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/icon"
+        android:label="레잇고"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDFsDMQAz2m6hQdcMsN4S1iOFWFuUseSTY" />
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".DutchPay"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ladder"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Selection"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Foodlist"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FoodInfo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DutchPay" />
-        <activity android:name=".Ladder" />
-        <activity android:name=".Selection" />
-        <activity android:name=".Foodlist" />
-        <activity android:name=".FoodInfo"></activity>
+        <activity android:name=".noFood"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MAP"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

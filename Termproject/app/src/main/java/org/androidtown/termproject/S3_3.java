@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.Button;
-
+import android.widget.ImageButton;
 
 
 public class S3_3 extends Fragment {
@@ -24,7 +24,7 @@ public class S3_3 extends Fragment {
 
 
 
-        Button button = (Button) rootView.findViewById(R.id.s2_10); //매운 button click
+        ImageButton button = (ImageButton) rootView.findViewById(R.id.s2_10); //매운 button click
 
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -34,7 +34,7 @@ public class S3_3 extends Fragment {
 
                 Selection activity = (Selection) getActivity();
 
-                activity.getIndex(307); //익은 고기 매운거 출력
+                activity.onFragmentChanged(307); //익은 고기 매운거 출력
 
             }
 
@@ -42,7 +42,7 @@ public class S3_3 extends Fragment {
 
 
 
-        Button button1 = (Button) rootView.findViewById(R.id.s2_11); //안매운 button click
+        ImageButton button1 = (ImageButton) rootView.findViewById(R.id.s2_11); //안매운 button click
 
 
 
@@ -54,7 +54,7 @@ public class S3_3 extends Fragment {
 
                 Selection activity = (Selection) getActivity();
 
-                activity.getIndex(308); // 익은 고기 안매운거 출력
+                activity.onFragmentChanged(308); // 익은 고기 안매운거 출력
 
             }
 
@@ -62,7 +62,7 @@ public class S3_3 extends Fragment {
 
 
 
-        Button button2 = (Button) rootView.findViewById(R.id.back); // 뒤로가기
+        ImageButton button2 = (ImageButton) rootView.findViewById(R.id.back); // 뒤로가기
 
 
 
@@ -74,7 +74,7 @@ public class S3_3 extends Fragment {
 
                 Selection activity = (Selection) getActivity();
 
-                activity.getIndex(102);
+                activity.onFragmentChanged(102);
 
             }
 
