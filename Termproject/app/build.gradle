@@ -14,15 +14,15 @@ android {
     defaultConfig {
         applicationId "org.androidtown.termproject"
         minSdkVersion 15
-<<<<<<< HEAD
+//<<<<<<< HEAD
         targetSdkVersion 22
         versionCode 12
         versionName "1.2.3"
-=======
+//=======
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
->>>>>>> origin/master
+//>>>>>>> origin/master
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
